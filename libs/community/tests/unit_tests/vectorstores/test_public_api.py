@@ -28,6 +28,7 @@ _EXPECTED = [
     "Epsilla",
     "FAISS",
     "Hologres",
+    "Infinispan",
     "LanceDB",
     "LLMRails",
     "Marqo",

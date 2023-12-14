@@ -202,6 +202,12 @@ def _import_hologres() -> Any:
     return Hologres
 
 
+def _import_infinispan() -> Any:
+    from langchain_community.vectorstores.infinispan import Infinispan
+
+    return Infinispan
+
+
 def _import_lancedb() -> Any:
     from langchain_community.vectorstores.lancedb import LanceDB
 
@@ -501,6 +507,8 @@ def __getattr__(name: str) -> Any:
         return _import_faiss()
     elif name == "Hologres":
         return _import_hologres()
+    elif name == "Infinispan":
+        return _import_infinispan()
     elif name == "LanceDB":
         return _import_lancedb()
     elif name == "LLMRails":
@@ -612,6 +620,7 @@ __all__ = [
     "Epsilla",
     "FAISS",
     "Hologres",
+    "Infinispan",
     "LanceDB",
     "LLMRails",
     "Marqo",
